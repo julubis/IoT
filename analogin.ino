@@ -1,12 +1,13 @@
+int nilai;
+
 void setup() {
   // put your setup code here, to run once:
-  pinMode(D12, OUTPUT);
+  Serial.begin(115200);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(D12, HIGH);
-  delay(500);
-  digitalWrite(D12, LOW);
-  delay(500);
+  nilai=analogRead(A0);
+  Serial.println(nilai);
+  delay(100);
 }
